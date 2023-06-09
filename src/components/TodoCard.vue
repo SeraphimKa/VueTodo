@@ -1,6 +1,11 @@
 <script setup lang="ts">
+import { ref } from 'vue'
+//stores
 import { useTodosStore } from '../stores/todos'
+//types
 import type Todo from "../types/Todo"
+//components
+import EditTodo from './EditTodo.vue'
 
 defineProps<{ todo: Todo }>()
 const todosStore = useTodosStore()
@@ -8,13 +13,21 @@ const todosStore = useTodosStore()
 const removeTodo = (todo: Todo) => {
     todosStore.removeTodo(todo.id)
 }
+
+const editTodo = ref(false)
+
 </script>
 
 <template>
     <li class="todo">
         <div>{{ todo.text }}</div>
-        <button class="delete" @click.prevent="removeTodo(todo)">X</button>
+        <div class=buttons> |
+            <button class="edit" @click.prevent="editTodo=true">Edit</button>
+            <button class="delete" @click.prevent="removeTodo(todo)
+            " >X</button>
+        </div>
     </li>
+    <EditTodo v-if="editTodo" :todo="todo" @close="editTodo=false" />
 </template>
 
 <style scoped>
@@ -36,10 +49,17 @@ const removeTodo = (todo: Todo) => {
     border-top: 1px solid rgb(92, 189, 181);
 }
 
+.edit {
+    cursor: pointer;
+    color: blue;
+    background: transparent;
+    border-radius: 5px;
+    margin-right: 2px;
+}
+
 .delete {
     cursor: pointer;
-    color: red;
-    border: 1px solid red;
-    border-radius: 5px;
+    color: rgb(196, 196, 196);
+    background: transparent;
 }
 </style>

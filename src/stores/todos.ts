@@ -15,5 +15,9 @@ export const useTodosStore = defineStore("todos", () => {
     }
   }
 
-  return { todos, addTodo, removeTodo };
+  function editTodo(id: number, newText: string) {
+    todos.value.filter((todo) => todo.id === id)[0].text = newText;
+  }
+
+  return { todos, addTodo, removeTodo, editTodo };
 });

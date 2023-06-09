@@ -6,8 +6,6 @@ import { useTodosStore } from '../stores/todos'
 import TodoCard from './TodoCard.vue';
 
 const todosStore = useTodosStore()
-
-
 </script>
 
 

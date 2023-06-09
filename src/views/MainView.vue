@@ -19,7 +19,11 @@ import TodoCardList from '../components/TodoCardList.vue';
         </main>
     </div>
 </template>
+
 <style scoped>
+.add-todo-wrapper {
+    padding: 1.2rem 5rem;
+    width: auto;
+}
 
 </style>
-
