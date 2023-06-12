@@ -20,6 +20,7 @@ const editTodo = ref(false)
 
 <template>
     <li class="todo">
+        <input class="todo-checkbox" type="checkbox" v-model="todo.completed">
         <div>{{ todo.text }}</div>
         <div class=buttons> |
             <button class="edit" @click.prevent="editTodo=true">Edit</button>
@@ -47,6 +48,11 @@ const editTodo = ref(false)
 .todo:hover {
     background-image: linear-gradient(to bottom, transparent, rgb(92, 189, 181));
     border-top: 1px solid rgb(92, 189, 181);
+}
+
+.todo-checkbox {
+    width: 1.1rem;
+    height: 1.1rem;
 }
 
 .edit {

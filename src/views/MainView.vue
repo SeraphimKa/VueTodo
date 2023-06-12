@@ -3,10 +3,6 @@
 import AddTodo from '../components/AddTodo.vue';
 import TodoCardList from '../components/TodoCardList.vue';
 
-
-
-
-
 </script>
 
 <template>
