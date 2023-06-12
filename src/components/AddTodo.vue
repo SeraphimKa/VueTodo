@@ -15,8 +15,9 @@ const onSubmit = () => {
 </script>
 <template>
     <form name="add-todo" @submit.prevent="onSubmit">
-        <input type="text" id="add-todo" placeholder="Add todo" v-model="newTodo" minlength="5" maxlength="50" required>
-        <button class="add-todo-btn" for="add-todo" type="submit">Add</button>
+        <input type="text" id="add-todo" placeholder="Add todo" v-model="newTodo" minlength="5" maxlength="50"
+            autocomplete="off" required>
+        <button class="add-todo-btn" for="add-todo" type="submit">Submit</button>
     </form>
 </template>
 
@@ -27,6 +28,8 @@ form {
     height: 50px;
     background: rgb(92, 189, 181);
     border-radius: 15px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 form:hover,
@@ -64,12 +67,13 @@ input:focus {
 }
 
 .add-todo-btn:hover,
-.add-todo-btn:focus
-{
+.add-todo-btn:focus {
     background: rgba(0, 0, 0, 0.4);
 
 }
+
 .add-todo-btn:active {
     color: rgb(202, 202, 113);
     box-shadow: inset -6px -6px 10px 5px rgb(0, 0, 0);
-}</style>
+}
+</style>
