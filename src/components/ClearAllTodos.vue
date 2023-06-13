@@ -19,6 +19,14 @@ const handleClick = () => {
 button {
     color: red;
     background: transparent;
-    border: red;
+    border: 2px solid red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: red;
+    color: white;
+    border: 2px solid white;
 }
 </style>

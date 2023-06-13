@@ -23,12 +23,12 @@ const editTodo = ref(false)
         <input class="todo-checkbox" type="checkbox" v-model="todo.completed">
         <div>{{ todo.text }}</div>
         <div class=buttons> |
-            <button class="edit" @click.prevent="editTodo=true">Edit</button>
+            <button class="edit" @click.prevent="editTodo = true">Edit</button>
             <button class="delete" @click.prevent="removeTodo(todo)
-            " >X</button>
+                ">X</button>
         </div>
     </li>
-    <EditTodo v-if="editTodo" :todo="todo" @close="editTodo=false" />
+    <EditTodo v-if="editTodo" :todo="todo" @close="editTodo = false" />
 </template>
 
 <style scoped>
@@ -45,6 +45,7 @@ const editTodo = ref(false)
     border-radius: 5px;
     border-top: 1px solid transparent;
 }
+
 .todo:hover {
     background-image: linear-gradient(to bottom, transparent, rgb(92, 189, 181));
     border-top: 1px solid rgb(92, 189, 181);
@@ -67,5 +68,11 @@ const editTodo = ref(false)
     cursor: pointer;
     color: rgb(196, 196, 196);
     background: transparent;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 </style>
