@@ -25,7 +25,6 @@ const onSubmit = () => {
     }
     emit('close')
 }
-
 </script>
 
 <template>

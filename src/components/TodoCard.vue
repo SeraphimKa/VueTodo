@@ -19,7 +19,7 @@ const editTodo = ref(false)
 </script>
 
 <template>
-    <li class="todo">
+    <li class="todo" :class="{ completed: todo.completed }">
         <input class="todo-checkbox" type="checkbox" v-model="todo.completed">
         <div>{{ todo.text }}</div>
         <div class=buttons> |
@@ -44,6 +44,10 @@ const editTodo = ref(false)
     background-color: rgb(90, 138, 179);
     border-radius: 5px;
     border-top: 1px solid transparent;
+}
+
+.completed {
+    background-color: rgb(46, 85, 119);
 }
 
 .todo:hover {
