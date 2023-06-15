@@ -10,7 +10,7 @@ import TodoCardList from '../components/TodoCardList.vue';
     <div class="wrapper">
         <h1 class="title">Todos <span class="title-underline"></span></h1>
         <main>
-            <div class="add-todo-wrapper">
+            <div class="todo-form-wrapper">
                 <AddTodo />
                 <ClearAllTodos />
             </div>
@@ -29,15 +29,18 @@ h1 {
     text-align: center;
 }
 
-.add-todo-wrapper {
+.todo-form-wrapper {
     display: flex;
     padding: 1.2rem 5rem;
 }
 
-@media screen and (width < 768px) {
-    .add-todo-wrapper {
+@media screen and (width < 820px) {
+    .todo-form-wrapper {
         padding: 1.2rem 2rem;
+        flex-direction: column;
+        gap: 5px;
+        align-items: center;
     }
-    
+
 }
 </style>

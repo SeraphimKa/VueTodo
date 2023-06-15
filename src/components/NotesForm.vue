@@ -19,7 +19,6 @@ const handleTyping = () => {
 
     timeout = setTimeout(() => {
         notesStore.notes = notesText.value
-        console.log(notesText.value)
     }, 500)
 }
 </script>

@@ -14,18 +14,25 @@ const onSubmit = () => {
 
 </script>
 <template>
-    <form name="add-todo" @submit.prevent="onSubmit">
-        <input type="text" id="add-todo" placeholder="Add todo" v-model="newTodo" minlength="5" maxlength="50"
-            autocomplete="off" required>
-        <button class="add-todo-btn add-todo-btn--in" for="add-todo" type="submit">Submit</button>
-    </form>
-    <button class="add-todo-btn add-todo-btn--out" for="add-todo" type="submit">Submit</button>
+    <div>
+        <form name="add-todo" @submit.prevent="onSubmit">
+            <input type="text" id="add-todo" placeholder="Add todo" v-model="newTodo" minlength="5" maxlength="50"
+                autocomplete="off" required>
+            <button class="add-todo-btn add-todo-btn--in" for="add-todo" type="submit">Submit</button>
+        </form>
+        <button class="add-todo-btn add-todo-btn--out" for="add-todo" type="submit">Submit</button>
+    </div>
 </template>
 
 <style scoped>
+div {
+    width: 100%;
+    display: flex;
+}
+
 form {
     display: flex;
-    width: 500px;
+    width: 100%;
     height: 50px;
     background: rgb(92, 189, 181);
     border-radius: 15px;
@@ -85,7 +92,7 @@ input:focus {
 
 @media screen and (width <=820px) {
     form {
-        width: 400px;
+        width: 100%;
         height: 40px;
     }
 

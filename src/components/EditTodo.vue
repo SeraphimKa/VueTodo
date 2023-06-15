@@ -107,7 +107,7 @@ input:focus {
     box-shadow: inset -6px -6px 10px 5px rgb(0, 0, 0);
 }
 
-@media screen and (width < 768px) {
+@media screen and (width <=820px) {
     form {
         width: 80vw;
     }
