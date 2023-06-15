@@ -8,6 +8,7 @@ import TodoCardList from '../components/TodoCardList.vue';
 
 <template>
     <div class="wrapper">
+        <h1 class="title">Todos <span class="title-underline"></span></h1>
         <main>
             <div class="add-todo-wrapper">
                 <AddTodo />
@@ -19,10 +20,24 @@ import TodoCardList from '../components/TodoCardList.vue';
 </template>
 
 <style scoped>
+h1 {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    text-shadow: 0 0 2px rgb(255, 255, 255);
+    font-size: 3rem;
+    text-align: center;
+}
+
 .add-todo-wrapper {
     display: flex;
-    align-items: center;
     padding: 1.2rem 5rem;
-    width: auto;
+}
+
+@media screen and (width < 768px) {
+    .add-todo-wrapper {
+        padding: 1.2rem 2rem;
+    }
+    
 }
 </style>

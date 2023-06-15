@@ -19,17 +19,21 @@ header {
 a {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-weight: 600;
-    color: rgb(0, 0, 0);
-    text-shadow: 0 0 2px rgb(255, 255, 255);
-    font-size: 2rem;
+    color: rgb(78, 78, 78);
+    font-size: 1rem;
 }
 
 a:hover {
-    color: rgb(25, 25, 25)
+    color: rgb(92, 189, 181, 0.8);
 }
 
 .active {
-    text-shadow: 0 0 5px rgb(255, 255, 255);
+    color: rgb(92, 189, 181);
     text-decoration-line: underline;
+}
+
+header {
+    border-bottom: 1px solid silver;
+    padding-bottom: 15px;
 }
 </style>

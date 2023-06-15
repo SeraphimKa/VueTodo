@@ -56,8 +56,8 @@ const editTodo = ref(false)
 }
 
 .todo-checkbox {
-    width: 1.1rem;
-    height: 1.1rem;
+    min-width: 1.1rem;
+    min-height: 1.1rem;
 }
 
 .edit {

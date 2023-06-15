@@ -17,8 +17,9 @@ const onSubmit = () => {
     <form name="add-todo" @submit.prevent="onSubmit">
         <input type="text" id="add-todo" placeholder="Add todo" v-model="newTodo" minlength="5" maxlength="50"
             autocomplete="off" required>
-        <button class="add-todo-btn" for="add-todo" type="submit">Submit</button>
+        <button class="add-todo-btn add-todo-btn--in" for="add-todo" type="submit">Submit</button>
     </form>
+    <button class="add-todo-btn add-todo-btn--out" for="add-todo" type="submit">Submit</button>
 </template>
 
 <style scoped>
@@ -75,5 +76,36 @@ input:focus {
 .add-todo-btn:active {
     color: rgb(202, 202, 113);
     box-shadow: inset -6px -6px 10px 5px rgb(0, 0, 0);
+}
+
+.add-todo-btn--out {
+    visibility: hidden;
+    position: absolute;
+}
+
+@media screen and (width <=820px) {
+    form {
+        width: 400px;
+        height: 40px;
+    }
+
+    .add-todo-btn {
+        font-size: 1rem;
+    }
+
+    .add-todo-btn--out {
+        visibility: visible;
+        position: relative;
+        color: rgb(92, 189, 181);
+    }
+
+    .add-todo-btn--in {
+        visibility: hidden;
+        position: absolute;
+    }
+
+    input {
+        border-radius: 15px;
+    }
 }
 </style>

@@ -19,7 +19,6 @@ onMounted(() => {
 
 
 <template>
-
     <ul class="todo-list">
         <TodoCard v-for="todo in todosStore.todos" :todo="todo" :key="todo.id" />
     </ul>
@@ -35,5 +34,6 @@ onMounted(() => {
     align-items: center;
     justify-content: start;
     gap: 1rem;
+    padding: 5px;
 }
 </style>
